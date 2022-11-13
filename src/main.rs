@@ -64,6 +64,8 @@ slint::slint! {
         width: 64px;
         background: solved ? #34CE57 : #3960D5;
         animate background { duration: 800ms; }
+        border-radius: 10px;
+        clip: true;
 
         Image {
             source: icon;
