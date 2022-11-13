@@ -74,21 +74,31 @@ slint::slint! {
         }
 
         // Left curtain
-        Rectangle {
-            background: #193076;
+        Image {
             width: open_curtain ? 0px : (parent.width / 2);
             height: parent.height;
             animate width { duration: 250ms; easing: ease-in; }
+
+            source: @image-url("icons/slint-logo-square-light-128x128.png");
+            source-clip-x: 0;
+            source-clip-y: 0;
+            source-clip-width: 64;
+            source-clip-height: 128;
         }
 
         // Right curtain
-        Rectangle {
-            background: #193076;
+        Image {
             x: open_curtain ? parent.width : (parent.width / 2);
             width: open_curtain ? 0px : (parent.width / 2);
             height: parent.height;
             animate width { duration: 250ms; easing: ease-in; }
             animate x { duration: 250ms; easing: ease-in; }
+
+            source: @image-url("icons/slint-logo-square-light-128x128.png");
+            source-clip-x: 64;
+            source-clip-y: 0;
+            source-clip-width: 64;
+            source-clip-height: 128;
         }
 
         TouchArea {
